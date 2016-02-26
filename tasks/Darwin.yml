@@ -1,2 +1,4 @@
 ---
 # tasks file for virtualbox(On OSX)
+- name: Install VirtualBox with Homebrew Cask
+  homebrew_cask: name=virtualbox

@@ -10,6 +10,9 @@ Requirements
 
 The dependencies on other softwares/librarys for this role.
 
+- Debian/Ubuntu
+- OSX
+
 Role Variables
 --------------
 
@@ -19,6 +22,8 @@ Role Dependencies
 -----------------
 
 The dependencies on other roles for this role.
+
+- FGtatsuro.python-requirements
 
 Example Playbook
 ----------------
@@ -38,7 +43,6 @@ Local requirements are as follows.
 
 - Ansible (> 2.0.0)
 - Docker (> 1.10.1)
-
 
 License
 -------

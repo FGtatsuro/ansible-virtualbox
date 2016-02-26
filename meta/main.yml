@@ -1,0 +1,17 @@
+galaxy_info:
+  author: FGtatsuro
+  description: Ansible role for virtualbox
+  license: MIT
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+
+  galaxy_tags:
+    - development
+
+# dependencies: []
+dependencies:
+  - FGtatsuro.python-requirements

@@ -1,0 +1,4 @@
+---
+# tasks file for virtualbox
+- name: Run tasks on current environment
+  include: "{{ ansible_os_family }}.yml"

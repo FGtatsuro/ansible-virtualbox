@@ -4,7 +4,7 @@ describe package('virtualbox'), :if => os[:family] == 'darwin' do
   it { should be_installed.by('homebrew_cask') }
 end
 
-describe package('virtualbox'), :if => os[:family] == 'debian' do
+describe package('virtualbox-5.0'), :if => os[:family] == 'debian' do
   it { should be_installed.by('apt') }
 end
 

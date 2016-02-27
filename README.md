@@ -3,7 +3,7 @@
 ansible-virtualbox
 ====================================
 
-Ansible role for virtualbox.
+Ansible role for VirtualBox.
 
 Requirements
 ------------

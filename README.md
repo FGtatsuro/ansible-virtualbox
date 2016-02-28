@@ -18,6 +18,8 @@ Role Variables
 
 The variables we can use in this role.
 
+    virtualbox_version: 5.0 (default)
+
 Role Dependencies
 -----------------
 

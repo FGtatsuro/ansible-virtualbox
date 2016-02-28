@@ -8,5 +8,5 @@
   apt_repository: repo="deb http://download.virtualbox.org/virtualbox/debian jessie contrib" update_cache=yes
   become: yes
 - name: Install VirtualBox
-  apt: name="virtualbox-{{ virtualbox_version }}" update_cache=yes cache_valid_time=3600
+  apt: name="virtualbox-{{ virtualbox_version }}" update_cache=yes cache_valid_time=3600  install_recommends=no
   become: yes

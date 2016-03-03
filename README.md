@@ -10,7 +10,7 @@ Requirements
 
 The dependencies on other softwares/librarys for this role.
 
-- Debian/Ubuntu
+- Debian
 - OSX
 
 Role Variables

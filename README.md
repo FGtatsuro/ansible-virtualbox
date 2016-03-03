@@ -12,6 +12,7 @@ The dependencies on other softwares/librarys for this role.
 
 - Debian
 - OSX
+  - Homebrew (>= 0.9.5)
 
 Role Variables
 --------------

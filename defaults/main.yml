@@ -1,3 +1,4 @@
 ---
 # defaults file for virtualbox
+# This value only affects tasks on Debian family
 virtualbox_version: 5.0

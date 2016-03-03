@@ -10,8 +10,9 @@ Requirements
 
 The dependencies on other softwares/librarys for this role.
 
-- Debian/Ubuntu
+- Debian
 - OSX
+  - Homebrew (>= 0.9.5)
 
 Role Variables
 --------------
@@ -45,8 +46,8 @@ We can use same steps of them for local Docker host.
 
 Local requirements are as follows.
 
-- Ansible (> 2.0.0)
-- Docker (> 1.10.1)
+- Ansible (>= 2.0.0)
+- Docker (>= 1.10.1)
 
 License
 -------

@@ -5,8 +5,8 @@
   apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc
   become: yes
 - name: Add the repository of VirtualBox
-  apt_repository: repo="deb http://download.virtualbox.org/virtualbox/debian jessie contrib" update_cache=yes
+  apt_repository: repo="{{ virtualbox_apt_repository }}" update_cache=yes
   become: yes
 - name: Install VirtualBox
-  apt: name="virtualbox-{{ virtualbox_version }}" update_cache=yes cache_valid_time=3600  install_recommends=no
+  apt: name="{{ virtualbox_apt_package }}" update_cache=yes cache_valid_time=3600  install_recommends=no
   become: yes

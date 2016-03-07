@@ -19,9 +19,13 @@ Role Variables
 
 The variables we can use in this role.
 
-- virtualbox_version: default=5.0 
-  - This value is valid only on Debian. This role tries to install "virtualbox-{{ virtualbox_version }}" package with apt.
-  - On OSX, latest version is always used.
+|name|description|default|
+|---|---|---|
+|virtualbox_apt_package|Apt package name of VirtualBox|virtualbox-5.0|
+|virtualbox_apt_repository|Apt repository of VirtualBox|deb http://download.virtualbox.org/virtualbox/debian jessie contrib|
+
+- These variables are valid only on Debian/Ubuntu, and they aren't used in OSX.
+- On OSX, latest version is always used.
 
 Role Dependencies
 -----------------

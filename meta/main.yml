@@ -11,6 +11,9 @@ galaxy_info:
     - name: Darwin
       versions:
         - all
+    - name: Ubuntu
+      versions:
+        - precise
 
   galaxy_tags:
     - development

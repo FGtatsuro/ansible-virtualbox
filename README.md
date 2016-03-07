@@ -10,7 +10,7 @@ Requirements
 
 The dependencies on other softwares/librarys for this role.
 
-- Debian
+- Debian/Ubuntu
 - OSX
   - Homebrew (>= 0.9.5)
 

@@ -26,6 +26,8 @@ matrix:
     - os: linux
       language: python
       python: 2.7
+      before_install:
+        - rvm install 2.2.3
       env:
         - TARGET=localhost
         - CONNECTION=local

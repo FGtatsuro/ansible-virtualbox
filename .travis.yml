@@ -32,6 +32,14 @@ matrix:
         - TARGET=localhost
         - CONNECTION=local
         - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian precise contrib'"
+    - os: linux
+      dist: trusty
+      language: python
+      python: 2.7
+      env:
+        - TARGET=localhost
+        - CONNECTION=local
+        - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian trusty contrib'"
 
 # This role needs sudo, thus we can't use the new container infrastructure
 # sudo: false

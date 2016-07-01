@@ -7,6 +7,7 @@ matrix:
       env:
         - TARGET=localhost
         - CONNECTION=local
+        - PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
     - os: linux
       dist: trusty
       language: python
@@ -32,12 +33,21 @@ matrix:
         - TARGET=localhost
         - CONNECTION=local
         - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian precise contrib'"
+    - os: linux
+      dist: trusty
+      language: python
+      python: 2.7
+      env:
+        - TARGET=localhost
+        - CONNECTION=local
+        - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian trusty contrib'"
 
 # This role needs sudo, thus we can't use the new container infrastructure
 # sudo: false
 sudo: required
 
 install:
+  - sudo pip install -U setuptools
   - sudo pip install ansible
   # Resolve dependencies(When target role isn't installed via Ansible Galaxy, auto resolution of dependencies doesn't occur.)
   - ansible-galaxy install FGtatsuro.python-requirements

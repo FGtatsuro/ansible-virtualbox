@@ -23,6 +23,7 @@ The variables we can use in this role.
 |---|---|---|
 |virtualbox_apt_package|Apt package name of VirtualBox|virtualbox-5.0|
 |virtualbox_apt_repository|Apt repository of VirtualBox|deb http://download.virtualbox.org/virtualbox/debian jessie contrib|
+|virtualbox_allow_unauthenticated|Install package even if it isn't authenticated.|yes|
 
 - These variables are valid only on Debian/Ubuntu, and they aren't used in OSX.
 - On OSX, latest version is always used.

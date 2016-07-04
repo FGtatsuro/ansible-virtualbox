@@ -8,5 +8,5 @@
   apt_repository: repo="{{ virtualbox_apt_repository }}" update_cache=yes
   become: yes
 - name: Install VirtualBox
-  apt: name="{{ virtualbox_apt_package }}" update_cache=yes cache_valid_time=3600 install_recommends=no allow_unauthenticated=yes
+  apt: name="{{ virtualbox_apt_package }}" update_cache=yes cache_valid_time=3600 install_recommends=no allow_unauthenticated="{{ virtualbox_allow_unauthenticated }}"
   become: yes

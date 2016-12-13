@@ -1,10 +1,16 @@
 ---
 # tasks file for virtualbox(On Debian family)
-# Ref: https://inexio.jp/20150707-944
+# Ref: https://www.virtualbox.org/wiki/Linux_Downloads
 - name: Add key for the repository of VirtualBox
   apt_key:
     url: 'https://www.virtualbox.org/download/oracle_vbox.asc'
   become: yes
+  when: (ansible_distribution_release != 'jessie' and ansible_distribution_release != 'xenial')
+- name: Add key for the repository ov VirtualBox(latest distribution)
+  apt_key:
+    url: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
+  become: yes
+  when: (ansible_distribution_release == 'jessie' or ansible_distribution_release == 'xenial')
 - name: Add the repository of VirtualBox
   apt_repository:
     repo: "{{ virtualbox_apt_repository }}"

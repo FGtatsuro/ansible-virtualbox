@@ -29,8 +29,6 @@ matrix:
       env:
         - TARGET=container
         - CONNECTION=docker
-        # TODO: Add Oracle public key for latest Debian/Ubuntu. https://www.virtualbox.org/wiki/Linux_Downloads
-        - EXTRA_VARS="virtualbox_allow_unauthenticated='yes'"
     - os: linux
       language: python
       python: 2.7

@@ -2,5 +2,5 @@
 # defaults file for virtualbox
 # This value only affects tasks on Debian family
 virtualbox_apt_package: "virtualbox-5.0"
-virtualbox_apt_repository: "deb http://download.virtualbox.org/virtualbox/debian jessie contrib"
+virtualbox_apt_repository: "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
 virtualbox_allow_unauthenticated: "yes"

@@ -1,6 +1,16 @@
 ---
 # tasks file for virtualbox(On Debian family)
 # Ref: https://inexio.jp/20150707-944
+- name: Check whether libdevmapper is installed.
+  command: "dpkg-query -f '${Status}' -W libdevmapper1.02.1"
+  register: check_libdevmapper
+  changed_when: no
+- name: Install requirement for VirtualBox
+  apt: name="libdevmapper1.02.1" update_cache=yes cache_valid_time=3600  install_recommends=no
+  become: yes
+  register: result
+  when: "'ok installed' not in check_libdevmapper.stdout"
+  changed_when: "'0 upgraded, 0 newly installed' not in result.stdout"
 - name: Add key for the repository of VirtualBox
   apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc
   become: yes

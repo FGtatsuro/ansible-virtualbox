@@ -3,4 +3,4 @@
 # This value only affects tasks on Debian family
 virtualbox_apt_package: "virtualbox-5.0"
 virtualbox_apt_repository: "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
-virtualbox_allow_unauthenticated: "yes"
+virtualbox_allow_unauthenticated: "no"

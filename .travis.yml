@@ -29,6 +29,8 @@ matrix:
       env:
         - TARGET=container
         - CONNECTION=docker
+        # TODO: Add Oracle public key for latest Debian/Ubuntu. https://www.virtualbox.org/wiki/Linux_Downloads
+        - EXTRA_VARS="virtualbox_allow_unauthenticated='yes'"
     - os: linux
       language: python
       python: 2.7
@@ -37,7 +39,6 @@ matrix:
       env:
         - TARGET=localhost
         - CONNECTION=local
-        - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian precise contrib' virtualbox_allow_unauthenticated='no'"
     - os: linux
       dist: trusty
       language: python
@@ -45,7 +46,6 @@ matrix:
       env:
         - TARGET=localhost
         - CONNECTION=local
-        - EXTRA_VARS="virtualbox_apt_repository='deb http://download.virtualbox.org/virtualbox/debian trusty contrib' virtualbox_allow_unauthenticated='no'"
 
 # This role needs sudo, thus we can't use the new container infrastructure
 # sudo: false

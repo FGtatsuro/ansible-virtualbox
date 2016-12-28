@@ -5,12 +5,12 @@
   apt_key:
     url: 'https://www.virtualbox.org/download/oracle_vbox.asc'
   become: yes
-  when: (ansible_distribution_release != 'jessie' and ansible_distribution_release != 'xenial')
+  when: not ansible_distribution_release in virtualbox_distributions_with_newpublickey
 - name: Add key for the repository ov VirtualBox(latest distribution)
   apt_key:
     url: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
   become: yes
-  when: (ansible_distribution_release == 'jessie' or ansible_distribution_release == 'xenial')
+  when: ansible_distribution_release in virtualbox_distributions_with_newpublickey
 - name: Add the repository of VirtualBox
   apt_repository:
     repo: "{{ virtualbox_apt_repository }}"
@@ -24,3 +24,4 @@
     install_recommends: no
     allow_unauthenticated: "{{ virtualbox_allow_unauthenticated }}"
   become: yes
+

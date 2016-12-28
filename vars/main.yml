@@ -1,2 +1,6 @@
 ---
 # vars file for virtualbox
+virtualbox_distributions_with_newpublickey:
+  - jessie
+  - xenial
+  - yakkety

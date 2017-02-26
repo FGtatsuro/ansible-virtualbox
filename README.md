@@ -21,7 +21,7 @@ The variables we can use in this role.
 
 |name|description|default|
 |---|---|---|
-|virtualbox_apt_package|Apt package name of VirtualBox|virtualbox-5.0|
+|virtualbox_apt_package|Apt package name of VirtualBox|virtualbox-5.1|
 |virtualbox_apt_repository|Apt repository of VirtualBox|"deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"|
 |virtualbox_allow_unauthenticated|Install package even if it isn't authenticated.|no|
 

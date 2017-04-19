@@ -20,6 +20,10 @@ matrix:
       dist: trusty
       language: python
       python: 2.7
+      addons:
+        apt:
+          packages:
+          - python-pip
       services:
         - docker
       before_script:
@@ -41,6 +45,10 @@ matrix:
       dist: trusty
       language: python
       python: 2.7
+      addons:
+        apt:
+          packages:
+          - python-pip
       env:
         - TARGET=localhost
         - CONNECTION=local

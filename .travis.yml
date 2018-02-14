@@ -13,9 +13,10 @@ matrix:
         - CONNECTION=local
         - PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
       install:
+        - sudo ln -s /usr/local/bin/pip2 /usr/local/bin/pip
         - sudo pip install -U setuptools
         - sudo pip install ansible
-        - ansible-galaxy install FGtatsuro.python-requirements
+        - git clone https://github.com/FGtatsuro/ansible-python-requirements.git roles/FGtatsuro.python-requirements
     - os: linux
       dist: trusty
       language: python
@@ -51,8 +52,7 @@ sudo: required
 
 install:
   - pip install ansible
-  # Resolve dependencies(When target role isn't installed via Ansible Galaxy, auto resolution of dependencies doesn't occur.)
-  - ansible-galaxy install FGtatsuro.python-requirements
+  - git clone https://github.com/FGtatsuro/ansible-python-requirements.git roles/FGtatsuro.python-requirements
 
 script:
   # Basic role syntax check

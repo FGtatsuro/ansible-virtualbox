@@ -4,3 +4,4 @@ virtualbox_distributions_with_newpublickey:
   - jessie
   - xenial
   - yakkety
+  - artful

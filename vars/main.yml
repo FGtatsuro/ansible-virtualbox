@@ -5,3 +5,4 @@ virtualbox_distributions_with_newpublickey:
   - xenial
   - yakkety
   - artful
+  - bionic
